@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 10px;
+}
+h1{
+    font-size: 175%;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+section{
+    padding: 0%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    overflow: auto;
+}
+section>div{
+    width: auto;
+    height: auto;
+}
+section>section.inside_section{
+    position: relative;
+    left: 70%;
+    background-color: aquamarine;
+    width: 30%;
+    border: 1px solid black;
+    font-size: 125%;
+}
+section>section.inside_section#inside_section_2{
+    background-color: olive;
+}
+section>section.inside_section#inside_section_3{
+    background-color: chartreuse;
+}
+/**** Desktop version ****/
+@media(min-width: 992px){
+    section{
+
+        background-color: blanchedalmond;
+    }
+    section#section_1{
+       float: left; 
+    }
+    section#section_2{
+        float: left;
+    }
+    section#section_3{
+        float: left;
+    }
+    section#section_1,section#section_2,section#section_3{
+        width: 30%;
+    }
+
+}
+
+/**** Tablet view ****/
+@media(min-width: 768px) and (max-width: 991px){
+    section{
+        background-color: chocolate;
+    }
+    section#section_1, section#section_2{
+        width: 49%;
+        float: left;
+    }
+    section#section_2{
+        float: right;
+        margin-right: 0%;
+    }
+    section#section_3{
+        width: 100%;
+        clear: both;
+    }
+}
+
+/**** Mobile view ****/
+@media(max-width: 767px){
+    section{
+        background-color: tomato;
+        clear: both;
+    }
+}
